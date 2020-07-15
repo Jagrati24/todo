@@ -1,0 +1,163 @@
+/* get rid og HTML styling- add reset css in html*/
+
+@font-face
+{
+  font-family: CeraPro;
+  src: url('../fonts/CeraPro-BoldItalic.ttf') format('truetype');
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+
+
+body
+{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* display: flex; */
+  /* justify-content: space-between;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: 2fr, 2fr;
+  grid-template-areas: 'head head' 'img form' 'tagline tagline';
+  align-items: space-around;
+}
+.heading
+{
+  /* width: 362px; */
+  width: 100%;
+  height: 20vh;
+  grid-area: head;
+  display: flex;
+  justify-content: left;
+  /* grid-row: 1;
+  grid-column: 1/ span 2; */
+  /* display: flex; */
+  margin-left: 323px;
+  font-family: CeraPro;
+  font-size: 110px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  /* float: left; */
+}
+
+.middle
+{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  /* grid-area: middle; */
+  height: auto;
+}
+
+.image
+{
+  width: 800px;
+  height: 500px;
+  margin-left: 56px;
+  object-fit: contain;
+  grid-area: img;
+  /* grid-row: 2;
+  grid-column: 1; */
+}
+
+.form
+{
+  width: 504px;
+  height: 619px;
+  border-radius: 20px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+  background-color: #f08e5e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: form;
+  /* grid-row: 2;
+  grid-column: 2; */
+}
+
+.form-head, .form-main
+{
+  margin-right: 52px;
+  margin-left: 52px;
+}
+.title
+{
+  width: 190px;
+  height: 42px;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.subtitle
+{
+  width: 158px;
+  height: 50px;
+  font-family: CeraPro;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.form input
+{
+  width: 400px;
+  height: 42px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.form button
+{
+  width: 106px;
+  height: 35px;
+  border-radius: 18px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fcfaf1;
+}
+
+.tagline
+{
+  /* width: 338px; */
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  margin-left: 335px;
+  font-family: Roboto;
+  font-size: 54px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  /* float: left; */
+  grid-area: tagline;
+  display: flex;
+  justify-content: left;
+  /* grid-row: 3;
+  grid-column: 1/ span 2; */
+}

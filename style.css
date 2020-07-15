@@ -1,0 +1,64 @@
+/* get rid og HTML styling- add reset css in html*/
+
+/* .grid
+{
+  display: grid;
+  grid-column-gap: 240px;
+  grid-template-areas: 'header' 'img form' 'tagline';
+} */
+
+body
+{
+  width: 1920px;
+  height: 1080px;
+  background-color: #ffffff;
+}
+.heading
+{
+  /* grid-area: header; */
+  width: 362px;
+  height: 116px;
+  font-family: CeraPro;
+  font-size: 110px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.image
+{
+  grid-area: img;
+  width: 912px;
+  height: 684px;
+  object-fit: contain;
+}
+
+.form
+{
+  grid-area: form;
+  width: 504px;
+  height: 619px;
+  border-radius: 20px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+  background-color: #f08e5e;
+}
+
+.tagline
+{
+  grid-area: tagline;
+  width: 338px;
+  height: 63px;
+  font-family: Roboto;
+  font-size: 54px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
