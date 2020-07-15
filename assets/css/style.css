@@ -4,25 +4,27 @@
 {
   font-family: CeraPro;
   src: url('../fonts/CeraPro-BoldItalic.ttf') format('truetype');
-  font-family: Roboto;
-  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  
 }
 
-
-
-body
+@font-face
 {
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  /* display: flex; */
-  /* justify-content: space-between;
-  flex-direction: column; */
-  display: grid;
-  grid-template-columns: 2fr, 2fr;
-  grid-template-areas: 'head head' 'img form' 'tagline tagline';
-  align-items: space-around;
+    font-family: Roboto;
+  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+
 }
+
+/* Roboto italics */
+@font-face 
+{
+    font-family: Roboto;
+  src: url('../fonts/Roboto-ThinItalic.ttf') format('truetype');
+  font-style: italic;
+  
+}
+
 .heading
 {
   /* width: 362px; */
@@ -160,4 +162,18 @@ body
   justify-content: left;
   /* grid-row: 3;
   grid-column: 1/ span 2; */
+}
+
+body
+{
+  /* width: 100%; */
+  height: 100%;
+  background-color: #ffffff;
+  /* display: flex; */
+  /* justify-content: space-between;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: 2fr, 2fr;
+  grid-template-areas: 'head head' 'img form' 'tagline tagline';
+  align-items: space-around;
 }
