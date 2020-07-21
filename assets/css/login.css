@@ -143,7 +143,7 @@ body
     font-weight: bold;
 }
 
-.form-inputs a
+.pass
 {
     font-family: Roboto;
     font-weight: 900;
@@ -152,6 +152,7 @@ body
     justify-content: left;
     color: #ffffff;
     font-size: 0.8rem;
+    float: left;
 }
 
 .form-content
