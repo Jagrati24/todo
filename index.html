@@ -1,41 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link href="/assets/css/reset.css"> -->
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-  <title>Sign up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Today</title>
 </head>
-<body class="grid">
-  <header class="heading">
-    Taskify
-  </header>
-  <main class="middle">
-    <div>
-      <img class="image" src="./assets/img/react-group-59.svg">
-    </div>
-    <div>
-      <form class="form">
-        <div class="form-head">
-          <p class="title">Welcome to</p>
-          <p class="subtitle">Taskify</p>
+<body>
+    <header class="head">
+        <div class="taskify">
+            Taskify
         </div>
-        <div class="form-input">
-          <input type="text" placeholder="Your Name">
-          <input type="email" placeholder="Email">
-          <input type="text" placeholder="Username">
-          <input type="password" placeholder="Password">
-          <input type="password" placeholder="Re-Confirm Password">
+        <div class="search">
+            <i class="material-icons" id="search-icon">search</i>
+            <input class="search-bar" type="text" placeholder="search">
         </div>
-        <div class="form-button"></div>
-          <button type="button">Sign up</button>
+        <div class="account">
+            <a><img class="acc-img" src="./assets/img/acc-img.jpeg"></a>
         </div>
-      </form> 
-    </div>
-  </main>
-  <div class="tagline">
-    Your to-do list
-  </div>
+    </header>
+    <main class="main">
+        <div class="leftdiv">
+            <div class="add-task">
+                <button class="add-button"><i class="material-icons" id="add-icon">add</i>New Task</button>
+            </div>
+            <div class="timeline">
+                <div class="tm-today">
+                    <a href="#">Today</a>
+                </div>
+                <div class="tm-tom">
+                    <a href="#">Tomorrow</a>
+                </div>
+                <div class="tm-week">
+                    <a href="#">Weekly</a>
+                </div>
+                <div class="tm-month">
+                    <a href="#">Monthly</a>
+                </div>
+            </div>
+            <div class="tags">
+                <div class="tag-title">
+                    Tags
+                </div>
+                <div class="tg-gen">
+                    <a href="#" class="gen"><i class="material-icons" id="bullet">fiber_manual_record</i> General</a>
+                    <!-- <span class="gen-count"></span> -->
+                </div>
+                <div class="tg-per">
+                    <a href="#" class="per"><i class="material-icons" id="bullet">fiber_manual_record</i> Personal</a>
+                    <p class="per-count"></p>
+                </div><div class="tg-des">
+                    <a href="#" class="des"><i class="material-icons" id="bullet">fiber_manual_record</i> Design</a>
+                    <p class="des-count"></p>
+                </div>
+                <div class="tg-col">
+                    <a href="#" class="col"><i class="material-icons" id="bullet">fiber_manual_record</i> College</a>
+                    <p class="col-count"></p>
+                </div>
+                <div class="tg-acd">
+                    <a href="#" class="acd"><i class="material-icons" id="bullet">fiber_manual_record</i> Academic</a>
+                    <p class="acd-count"></p>
+                </div>
+                <div class="add-tag-btn">
+                    <button class="add-tag"><i class="material-icons" id="tag-icon">add</i>Add tags</button>
+                    <div class="add-tag-popup">
+                        <input type="text" class="tag-head" placeholder="Add Tag">
+                        <hr>
+                        <div class="colour-sec">
+                            <p class="colour-head">Colour</p>
+                            <div class="colours">
+                                <i class="material-icons" id="c1">fiber_manual_record</i>
+                                <i class="material-icons" id="c2">fiber_manual_record</i>
+                                <i class="material-icons" id="c3">fiber_manual_record</i>
+                                <i class="material-icons" id="c4">fiber_manual_record</i>
+                            <br>
+                                <i class="material-icons" id="c5">fiber_manual_record</i>
+                                <i class="material-icons" id="c6">fiber_manual_record</i>
+                                <i class="material-icons" id="c7">fiber_manual_record</i>
+                                <i class="material-icons" id="c8">fiber_manual_record</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tasklist">
+            <div class="daydate">
+                <p class="day">Today</p>
+                <p class="date">25 September 20</p>
+            </div>
+            <div class="tasks">
+                <input type="radio" id="task" name="task1">
+                <div class="task-details">
+                    <div class=tdline-1>
+                        <span class="task-name">Task no 1</span>
+                        <span class="task-desc">Complete the tasks by the deadline</span>
+                    </div>
+                    <div class="tdline-2">
+                        <span class="due">Due on</span>
+                        <span class="time">10:00pm</span>
+                        <span class="tag-icon"><i class="material-icons"></i></span>
+                        <span><a class="edit" href="#">Edit</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightdiv">
+            <p class="notes">Notes</p>
+            <p class="notepad">Please write your notes here, whatever you want to write. No judgements at all</p>
+        </div>
+    </main>
+    <!-- <script src="./src/index.js"></script> -->
 </body>
 </html>
