@@ -24,7 +24,7 @@
     <main class="main">
         <div class="leftdiv">
             <div class="add-task">
-                <button class="add-button"><i class="material-icons" id="add-icon">add</i>New Task</button>
+                <button class="new-task-button"><i class="material-icons" id="add-icon">add</i>New Task</button>
             </div>
             <div class="timeline">
                 <div class="tm-today">
@@ -65,53 +65,224 @@
                 </div>
                 <div class="add-tag-btn">
                     <button class="add-tag"><i class="material-icons" id="tag-icon">add</i>Add tags</button>
-                    <div class="add-tag-popup">
-                        <input type="text" class="tag-head" placeholder="Add Tag">
-                        <hr>
-                        <div class="colour-sec">
-                            <p class="colour-head">Colour</p>
-                            <div class="colours">
-                                <i class="material-icons" id="c1">fiber_manual_record</i>
-                                <i class="material-icons" id="c2">fiber_manual_record</i>
-                                <i class="material-icons" id="c3">fiber_manual_record</i>
-                                <i class="material-icons" id="c4">fiber_manual_record</i>
-                            <br>
-                                <i class="material-icons" id="c5">fiber_manual_record</i>
-                                <i class="material-icons" id="c6">fiber_manual_record</i>
-                                <i class="material-icons" id="c7">fiber_manual_record</i>
-                                <i class="material-icons" id="c8">fiber_manual_record</i>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="tasklist">
-            <div class="daydate">
-                <p class="day">Today</p>
-                <p class="date">25 September 20</p>
-            </div>
-            <div class="tasks">
-                <input type="radio" id="task" name="task1">
-                <div class="task-details">
-                    <div class=tdline-1>
-                        <span class="task-name">Task no 1</span>
-                        <span class="task-desc">Complete the tasks by the deadline</span>
-                    </div>
-                    <div class="tdline-2">
-                        <span class="due">Due on</span>
-                        <span class="time">10:00pm</span>
-                        <span class="tag-icon"><i class="material-icons"></i></span>
-                        <span><a class="edit" href="#">Edit</a></span>
-                    </div>
-                </div>
-            </div>
+        <div class="middle">
+            <p class="day">Today</p>
+            <p class="date">25 September 20</p>
+            <ul class="tasklist">
+            </ul>
         </div>
         <div class="rightdiv">
             <p class="notes">Notes</p>
             <p class="notepad">Please write your notes here, whatever you want to write. No judgements at all</p>
         </div>
     </main>
-    <!-- <script src="./src/index.js"></script> -->
+    <div class="popups">
+        <div class="new-task-popup">
+            <form class="new-task-form" name="newtask">
+                <div class="newline1">
+                    <p class="new-title">New Task</p>
+                    <button class="remove-task">Remove Task</button>
+                </div>
+                <div class="newline2">
+                    <input type="text" class="new-task-name" name="taskname">
+                </div>
+                <div class="newline3">
+                    <input type="text" class="add-task-desc" placeholder="Add description (optional)" name="taskdesc">
+                </div>
+                <div class="newline4">
+                    <p>Date</p>
+                    <div class="rad-today">  
+                        <input type="radio" id="today" name="date" value="today">
+                        <label for="today">Today</label>
+                    </div>
+                    <div class="rad-tom">
+                        <input type="radio" id="tom" name="date" value="tom">
+                        <label for="tom">Tomorrow</label>
+                    </div>
+                </div>
+                <div class="newline5">
+                    <p>Time</p>
+                    <input type="number" placeholder="hh" name="hour" min="01" max="12">
+                    <input type="number" placeholder="mm" name="min" min="00" max="59">
+                    <input type="radio" id="am" name="time" value="am">
+                    <label for="am">am</label>
+                    <input type="radio" id="pm" name="time" value="pm">
+                    <label for="pm">pm</label>
+                </div>
+                <div class="newline6">
+                    <p>Tags</p>
+                    <div class="gtag">
+                        <input type="radio" value="General" name="tag" class="hide" id="ntg">
+                        <span class="custom"></span>
+                        <label for="ntg" class="gentag">General</label>
+                    </div>
+                    <div class="ptag">
+                        <input type="radio" value="Personal" name="tag" class="hide" id="ntp">
+                        <span class="custom"></span>
+                        <label for="ntp" class="pertag">Personal</label>
+                    </div>
+                    <div class="dtag">
+                        <input type="radio" value="Design" name="tag" class="hide" id="ntd">
+                        <span class="custom"></span>
+                        <label for="ntd" class="destag">Design</label>
+                    </div>
+                    <div class="ctag">
+                        <input type="radio" value="College" name="tag" class="hide" id="ntc">
+                        <span class="custom"></span>
+                        <label for="ntc" class="coltag">College</label>
+                    </div>
+                    <div class="atag">
+                        <input type="radio" value="Academic" name="tag" class="hide" id="nta">
+                        <span class="custom"></span>
+                        <label for="nta" class="acdtag">Academic</label>
+                    </div>
+                </div>
+                <div class="newline7">
+                    <input type="text" placeholder="Custom tag">
+                    <div class="colours1">
+                        <input type="radio" name="tag" class="hide" id="c1">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c2">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c3">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c4">
+                        <span class="custom"></span>
+                    </div>
+                    <div class="colours2">
+                        <input type="radio" name="tag" class="hide" id="c5">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c6">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c7">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c8">
+                        <span class="custom"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="edit-task-popup">
+            <form class="edit-task-form" name="edittask">
+                <div class="edline-1">
+                    <p class="edit-title">Edit Task</p>
+                    <button class="remove-task">Remove Task</button>
+                </div>
+                <div class="edline-2">
+                    <input type="text" class="ed-task-name" name="taskname">
+                </div>
+                <div class="edline-3">
+                    <input type="text" class="ed-task-desc" name="taskdesc" placeholder="Add description (optional)">
+                </div>
+                <div class="edline-4">
+                    <p>Date</p>
+                    <div class="rad-today">  
+                        <input type="radio" id="today" name="date" value="today">
+                        <label for="today">Today</label>
+                    </div>
+                    <div class="rad-tom">
+                        <input type="radio" id="tom" name="date" value="tom">
+                        <label for="tom">Tomorrow</label>
+                    </div>
+                </div>
+                <div class="edline-5">
+                    <p>Time</p>
+                    <input type="text" placeholder="hh" name="hour">
+                    <input type="text" placeholder="mm" name="min">
+                    <input type="radio" id="am" name="time" value="am">
+                    <label for="am">am</label>
+                    <input type="radio" id="pm" name="time" value="pm">
+                    <label for="pm">pm</label>
+                </div>
+                <div class="edline-6">
+                    <p>Tags</p>
+                    <div class="gtag">
+                        <input type="radio" value="General" name="tag" class="hide" id="etg">
+                        <span class="custom"></span>
+                        <label for="etg" class="gentag">General</label>
+                    </div>
+                    <div class="ptag">
+                        <input type="radio" value="Personal" name="tag" class="hide" id="etp">
+                        <span class="custom"></span>
+                        <label for="etp" class="pertag">Personal</label>
+                    </div>
+                    <div class="dtag">
+                        <input type="radio" value="Design" name="tag" class="hide" id="etd">
+                        <span class="custom"></span>
+                        <label for="etd" class="destag">Design</label>
+                    </div>
+                    <div class="ctag">
+                        <input type="radio" value="College" name="tag" class="hide" id="etc">
+                        <span class="custom"></span>
+                        <label for="etc" class="coltag">College</label>
+                    </div>
+                    <div class="atag">
+                        <input type="radio" value="Academic" name="tag" class="hide" id="eta">
+                        <span class="custom"></span>
+                        <label for="eta" class="acdtag">Academic</label>
+                    </div>
+                </div>
+                <div class="edline-7">
+                    <input type="text" placeholder="Custom tag">
+                    <div class="colours1">
+                        <input type="radio" name="tag" class="hide" id="c1">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c2">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c3">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c4">
+                        <span class="custom"></span>
+                    </div>
+                    <div class="colours2">
+                        <input type="radio" name="tag" class="hide" id="c5">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c6">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c7">
+                        <span class="custom"></span>
+                        <input type="radio" name="tag" class="hide" id="c8">
+                        <span class="custom"></span>
+                    </div>
+                    <div name="save">
+                        <button>Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="add-tag-popup">
+            <form class="add-tag-form" name="addtag">
+                <input type="text" class="tag-head" placeholder="Add Tag">
+                <hr>
+                <div class="colour-sec">
+                    <p class="colour-head">Colour</p>
+                    <div class="colours">
+                        <input type="text" placeholder="Custom tag">
+                        <div class="colours1">
+                            <input type="radio" name="tag" class="hide" id="c1">
+                            <span class="custom"></span>
+                            <i class="material-icons" name="tag" id="c2">fiber_manual_record</i>
+                            <i class="material-icons" name="tag" id="c3">fiber_manual_record</i>
+                            <i class="material-icons" name="tag" id="c4">fiber_manual_record</i>
+                        </div>
+                        <div class="colours2">
+                            <i class="material-icons" name="tag" id="c5">fiber_manual_record</i>
+                            <i class="material-icons" name="tag" id="c6">fiber_manual_record</i>
+                            <i class="material-icons" name="tag" id="c7">fiber_manual_record</i>
+                            <i class="material-icons" name="tag" id="c8">fiber_manual_record</i>
+                        </div>
+                    <!-- <div name="save">
+                        <button>Save</button>
+                    </div> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./src/index.js"></script>
 </body>
 </html>

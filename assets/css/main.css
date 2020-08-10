@@ -110,12 +110,13 @@ body
 {
     display: flex;
     justify-content: flex-start;
+    width: 100%;
 }
 
 /* Left Side */
 .leftdiv
 {
-    width: 10%;
+    width: 15%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -130,7 +131,7 @@ body
 
 } */
 
-.add-button
+.new-task-button
 {
     background-color: coral;
     border-radius: 10vh;
@@ -186,36 +187,41 @@ body
 
 }
 
-.tg-gen, .gen
+.tg-gen,  .gentag  ,.gen
 {
     text-decoration: none;
     color: #2f7893;
+    padding-left: 0.5rem ;
 }
 
 /* gen-count is dynamic-JS */
 
-.tg-per, .per
+.tg-per, .per, .pertag
 {
     text-decoration: none;
     color: #c95a1d;
+    padding-left: 0.5rem ;
 }
 
-.tg-des, .des
+.tg-des, .des, .destag
 {
     text-decoration: none;
     color: #0f7e1c;
+    padding-left: 0.5rem ;
 }
 
-.tg-col, .col
+.tg-col, .col, .coltag 
 {
     text-decoration: none;
     color: #af8515;
+    padding-left: 0.5rem ;
 }
 
-.tg-acd,.acd
+.tg-acd,.acd, .acdtag
 {
     text-decoration: none;
     color: #5555be;
+    padding-left: 0.5rem ;
 }
 
 #bullet,#tag-icon
@@ -242,13 +248,14 @@ body
     width: 11vw;
     border: 1px solid black;
     border-radius: 2vw;
+    position: absolute;
     /* z-index: 999999; */
     margin: 1vw;
     padding: 1vw;
     background-color: white;
 }
 
-.tag-head, .add-tag-popup > hr
+.tag-head, .add-tag-form > hr
 {
     font-family: Roboto;
     font-style: italic;
@@ -293,12 +300,14 @@ body
     /* padding-bottom: 2vh; */
     width: 80%;
     margin: 1vw;
+    padding: 1vw;
 }
 
-.daydate
+.middle
 {
     padding: 0.2vw;
-    margin-bottom: 1.5vw;
+    margin: 1.5vw;
+    width: 70%;
 }
 
 .day
@@ -324,10 +333,11 @@ body
     align-items: center;
 }
 
-#task1
+#task
 {
     color: black;
-    size: 2rem;
+    width: 4vw;
+    height: 4vh;
 }
 
 .task-details
@@ -386,6 +396,8 @@ body
 
 .edit
 {
+    border: none;
+    background: none;
     text-decoration: none;
     color: black;
     font-family: Roboto;
@@ -400,11 +412,309 @@ body
     align-items: center;
 }
 
+.edit-task-popup, .new-task-popup
+{
+    display: none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    height: 60vh;
+    width: 60vw;
+    margin: 1vw;
+    padding: 2vw; 
+    position: absolute;
+
+    background: white;
+}
+
+.new-task-popup
+{
+    left: 10%;
+    top:15%;
+}
+
+.edit-task-popup
+{
+    left: 25%;
+    top: 25%;
+}
+
+.add-tag-popup
+{
+    display: none;
+    left: 15%;
+    top: 60%;
+    height: 30vh;
+    width: 30vw;
+}
+
+.edit-task-form, .new-task-form, .add-tag-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: Roboto;
+}
+
+.edit-task-popup  input, .new-task-popup input, .add-tag-popup input
+{
+    border: none;
+    border-bottom:1px solid #d8d8d8 ;
+}
+
+.edit-task-popup  p, .new-task-popup p
+{
+    font-weight: 500;
+    margin-right: 3vw;
+}
+
+.edline-1, .edline-4, .edline-5, .edline-6, .newline1, .newline4, .newline5, .newline6
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.edit-title, .new-title
+{
+    font-size: 1.5rem;
+    padding-right: 25vw;
+}
+
+.rad-today, .rad-tom, .edline-6 div, .newline6 div
+{
+    margin: 1vw;
+}
+
+.edline-5 input, .newline5 input
+{
+    width: 3.5vw;
+    margin:0vw 0.5vw ;
+}
+
+.remove-task
+{
+    border: none;
+    background-color: white;
+    font-style: italic;
+    color: #a29797;
+    font-size: 1rem;
+    font-weight: 500;
+    float: right;
+}
+
+#am,#pm
+{
+    visibility: hidden;
+}
+
+.newline5 label
+{
+    cursor: pointer;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 0.7rem;
+    color: #9f9f9f;
+}
+
+
+.newline5 label
+{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.hide
+{
+    display: none;
+}
+
+.gtag,.ptag, .ctag, .dtag, .atag, .colours1, .colours2
+{
+    display: flex;
+}
+
+.hide + .custom
+{
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#ntg + .custom, #etg + .custom
+{
+    border:1px solid  #2f7893 ;
+    /* margin-right: 1vw; */
+}
+
+#ntp + .custom, #etp + .custom
+{
+    border:1px solid  #c95a1d ;
+}
+
+#ntd + .custom, #etd + .custom
+{
+    border:1px solid  #0f7e1c ;
+}
+
+#ntc + .custom, #etc + .custom
+{
+    border:1px solid  #af8515 ;
+}
+
+#nta + .custom, #eta + .custom
+{
+    border:1px solid  #5555be ;
+}
+
+#c1+ .custom
+{
+    border: 1px solid #f59566;
+    margin-right: 0.8vw;
+    margin-bottom: 0.7vw;
+}
+
+#c2+ .custom
+{
+    border: 1px solid #95e1fd;   
+    margin-right: 0.8vw;
+    margin-bottom: 0.7vw;
+}
+
+#c3+ .custom
+{
+    border: 1px solid #b2d346;
+    margin-right: 0.8vw;
+    margin-bottom: 0.7vw;
+}
+
+#c4+ .custom
+{
+    border: 1px solid #cec397;
+    margin-right: 0.8vw;
+    margin-bottom: 0.7vw;
+}
+
+#c5+ .custom
+{
+    border: 1px solid #99ea6f;
+    margin-right: 0.8vw;
+
+}
+
+#c6+ .custom
+{
+    border: 1px solid #000000;
+    margin-right: 0.8vw;
+
+}
+
+#c7+ .custom
+{
+    border: 1px solid #720707;
+    margin-right: 0.8vw;
+
+}
+
+#c8+ .custom
+{
+    border: 1px solid #aaaaaa;
+    margin-right: 0.8vw;
+
+}
+
+#ntg:checked + .custom, #etg:checked + .custom
+{
+    background-color: #2f7893 ;
+}
+
+#ntp:checked + .custom, #etp:checked + .custom
+{
+    background-color: #c95a1d ;
+}
+
+#ntd:checked + .custom, #etd:checked + .custom
+{
+    background-color: #0f7e1c ;
+}
+
+#ntc:checked + .custom, #etc:checked + .custom
+{
+    background-color: #af8515 ;
+}
+
+#nta:checked + .custom, #eta:checked + .custom
+{
+    background-color: #5555be ;
+}
+
+#c1:checked + .custom:after
+{
+    background-color: #f59566;
+}
+
+#c2:checked + .custom
+{
+    background-color: #95e1fd;
+}
+
+#c3:checked + .custom
+{
+    background-color:#b2d346;
+}
+
+#c4:checked + .custom
+{
+    background-color: #cec397;
+}
+
+#c5:checked + .custom
+{
+    background-color: #99ea6f;
+}
+
+#c6:checked + .custom
+{
+    background-color: #000000;
+}
+
+#c7:checked + .custom
+{
+    background-color: #720707;
+}
+
+#c8:checked + .custom
+{
+    background-color: #aaaaaa;
+}
+
+.edline-3, .newline3
+{
+    color: #a29797;
+    font-style: italic;
+}
+
+.edline-7, .newline3
+{
+    margin-left: 5vw;
+}
+
+.edline-7 input, .newline7 input
+{
+    margin-bottom: 1vw;
+    font-style: italic;
+    width: 9vw;
+}
+
 /* Right side */
 .rightdiv
 {
     height: 100vh;
-    width: 10%;
+    width: 15%;
     /* float: left; */
     padding: 2vw;
     border-left: 0.1rem solid lightgray;
